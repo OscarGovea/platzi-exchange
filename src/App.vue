@@ -1,18 +1,19 @@
 <template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
-  </div>
+  <main>
+    <px-header />
+    <div class="container">
+      <router-view />
+    </div>
+  </main>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-
+import PxHeader from "@/components/PxHeader";
 export default {
   name: "App",
   components: {
-    HelloWorld
-  }
+    PxHeader,
+  },
 };
 </script>
 
@@ -24,5 +25,9 @@ export default {
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
 </style>
